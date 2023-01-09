@@ -21,11 +21,7 @@ export default {
 <template>
   <div class="app-container">
     <div class="app-content">
-      <Title titleName="Karimjon Umarov" size="large" />
-      <Title :titleName="subTitle" size="small" />
-      <Button size="large">I'M BUYING</Button>
-      <Button size="large" type="primary">I'M SELLING</Button>
-      <Button size="large" type="success">I'M BUYING & SELLING</Button>
+      <RouterView />
     </div>
   </div>
 </template>
