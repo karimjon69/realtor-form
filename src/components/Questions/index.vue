@@ -7,25 +7,27 @@
       :questionNumber="index + 1"
       :visibleQuestionNumber="visibleQuestionNumber"
       @answered="handleAnswered"
+      @valid="handleValid"
     />
     <el-button
       class="form-button"
       v-loading.fullscreen.lock="fullscreenLoading"
       element-loading-text="Loading..."
       type="primary" 
-      v-if="!allQuestionsAnswered"
-      :disabled="isNextDisabled"
+      v-if="!allQuestionsAnswered || !isValidAnswer"
+      :disabled="isNextDisabled || !isValidAnswer"
       @click="handleNext">
       Next
     </el-button>
     <el-button
-      class="form-button"
+      style="width: 200px;"
       v-loading.fullscreen.lock="fullscreenLoading"
       element-loading-text="We will contact you soon..."
       type="primary" 
-      v-if="allQuestionsAnswered"
+      v-if="allQuestionsAnswered && isValidAnswer"
       @click="handleSubmit">
-      Submit
+      Show Me Top Realtors
+      <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
     </el-button>
   </div>
 </template>
@@ -44,6 +46,7 @@ export default {
       answers: {},
       visibleQuestionNumber: 1,
       fullscreenLoading: false,
+      isValidAnswer: true
     }
   },
   components: {
@@ -75,11 +78,13 @@ export default {
     handleAnswered(payload){
       this.answers[payload.question] = payload.answer;
     },
+    handleValid(valid) {
+      this.isValidAnswer = valid;
+    },
     sendSms(message){
       console.log(message);
-      return;
       const client = axios.create({
-        baseURL: `http://localhost:${import.meta.env.VITE_SERVER_PORT}`,
+        baseURL: `${import.meta.env.VITE_SERVER_URL}`,
       });
       client.post('/sendSms', {
         message: message,

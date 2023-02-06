@@ -18,13 +18,22 @@ export default {
 <template>
   <div class="home-container">
     <div class="home-container--contents">
-      <Title titleName="Karimjon Umarov" size="large" />
+      <Title titleName="Real Estate Seattle" size="medium" />
       <el-divider />
-      <Title titleName="See the Top Realtors In Your Market" size="small" />
-      <Title titleName="We analyze millions of home sales to find real estate agents that sell homes faster and for more money." size="small" />
-      <Button size="large" type="success" @click="handleClick('buying')" round >I'M BUYING</Button> <br/>
-      <Button size="large" type="success" @click="handleClick('selling')" round>I'M SELLING</Button> <br/>
-      <Button size="large" type="primary" @click="handleClick('buyingAndSelling')" round>I'M BUYING & SELLING</Button> <br/>
+      <Title titleName="Find the Top Realtors In Your Market" size="small" />
+      <Title titleName="We recommend the best real estate agents in your market area who sell properties quickly and for higher prices, as well as buyer's agents who assist in finding the best house within your budget." size="small" />
+      <Button size="large" type="success" @click="handleClick('buying')" round >
+        I'M BUYING
+        <font-awesome-icon icon="fa-solid fa-cart-shopping" />
+      </Button> <br/>
+      <Button size="large" type="success" @click="handleClick('selling')" round>
+        I'M SELLING
+        <font-awesome-icon icon="fa-solid fa-house-flag" />
+      </Button> <br/>
+      <Button size="large" type="primary" @click="handleClick('buyingAndSelling')" round>
+        I'M BUYING & SELLING
+        <font-awesome-icon icon="fa-solid fa-handshake" />
+      </Button> <br/>
     </div>
   </div>
 </template>

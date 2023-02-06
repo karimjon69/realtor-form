@@ -1,8 +1,10 @@
 let contactQuestions = [
   {
     type: 'input',
+    validation: 'email',
     verbiage: 'Email Address',
-    subVerbiage: 'Where should we email your list?'
+    subVerbiage: 'Where should we email your list?',
+    placeholder: 'xxxx@domain.com'
   },
   {
     type: 'input',
@@ -11,8 +13,10 @@ let contactQuestions = [
   },
   {
     type: 'input',
+    validation: 'phone',
     verbiage: 'Phone Number',
-    subVerbiage: 'A good number to contact you'
+    subVerbiage: 'A good number to contact you',
+    placeholder: 'xxx-xxx-xxxx'
   },
 ];
 
@@ -36,16 +40,15 @@ let buyingQuestions = [
     type: 'radio',
     verbiage: `What's your price range?`,
     options: [
-      '$50,000 to $150,000', '$150,000 to $350,000', '$350,000 to $1,000,000', 'Over $1,000,000' 
+      '$50,000 to $500,000', '$500,000 to $1,000,000', '$1,000,000 to $2,000,000', 'Over $2,000,000' 
     ]
   }, 
   {
-    type: 'input',
-    verbiage: 'What state are you buying in?'
-  }, 
-  {
-    type: 'input',
-    verbiage: 'Ideally, what city?'
+    type: 'dropdown',
+    verbiage: 'Ideally, what city?',
+    options: [
+      "Seattle", "Bellevue", "Redmond", "Kirkland", "Renton", "Woodinville", "Bothell"
+    ]
   },
 ];
 
@@ -69,11 +72,12 @@ let sellingQuestions = [
     type: 'radio',
     verbiage: `What's your ideal selling price?`,
     options: [
-      '$50,000 to $150,000', '$150,000 to $350,000', '$350,000 to $1,000,000', 'Over $1,000,000' 
+      '$50,000 to $500,000', '$500,000 to $1,000,000', '$1,000,000 to $2,000,000', 'Over $2,000,000' 
     ]
   }, 
   {
     type: 'input',
+    validation: 'number',
     verbiage: 'Property Zip Code',
     subVerbiage: 'Just a 5 Digit Zip Code'
   },

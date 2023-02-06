@@ -22,7 +22,7 @@ export default {
 }
 
 .small { 
-  font-size: 2em;
+  font-size: 1.25em;
 }
 
 .shadow {

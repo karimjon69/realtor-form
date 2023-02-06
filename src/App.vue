@@ -57,5 +57,20 @@ export default {
 .router-view {
   margin-top: 50px;
   position: fixed;
+  width: 100%;
+}
+</style>
+
+<style>
+.el-radio__label {
+  font-size: 18px !important;
+}
+
+.svg-inline--fa {
+  padding-left: 10px;
+}
+
+.el-input {
+    width: 80% !important;
 }
 </style>
