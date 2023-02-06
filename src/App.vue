@@ -73,4 +73,8 @@ export default {
 .el-input {
     width: 80% !important;
 }
+
+.el-button {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
 </style>

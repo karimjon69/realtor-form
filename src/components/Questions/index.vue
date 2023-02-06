@@ -108,7 +108,7 @@ export default {
       this.visibleQuestionNumber = 1;
       setTimeout(() => {
         this.fullscreenLoading = false
-        this.$router.push({ name: 'home-success', params: { showSuccess: true } });
+        this.$router.push({ name: 'success' });
       }, 3000);
     }
   },

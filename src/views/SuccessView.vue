@@ -1,16 +1,18 @@
 <script>
-import Home from "../components/Home/Index.vue";
-
+import Title from "@/components/shared/title.vue";
 export default {
   components: {
-    Home,
-  },
+    Title
+  }
 }
 </script>
 
 <template>
   <main>
-    <Home class="home-view" />
+    <div class="home-view">
+      <br/><br/>
+      <Title titleName="Thanks, we'll email selecting  the top Realtor in your market in a few minutes!" size="small" />
+    </div>
   </main>
 </template>
 
@@ -21,5 +23,8 @@ export default {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  text-align: center;
 }
+
+
 </style>

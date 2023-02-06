@@ -17,12 +17,15 @@
       </el-radio>
     </div>
     </el-radio-group>
-    <el-input 
-      v-if="questionnaire.type === 'input'"
-      v-model="input" 
-      @input="handleAnswerChange"
-      :placeholder="questionnaire.placeholder"
-    />
+    <div>
+      <el-input 
+        v-if="questionnaire.type === 'input'"
+        autofocus="autofocus"
+        v-model="input" 
+        @input="handleAnswerChange"
+        :placeholder="questionnaire.placeholder"
+      />
+    </div>
     <el-select 
       v-if="questionnaire.type === 'dropdown'" 
       v-model="input" placeholder="Select" 

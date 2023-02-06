@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import QuestionsView from "../views/QuestionsView.vue";
+import SuccessView from "../views/SuccessView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,17 +12,16 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/success",
-      name: "home-success",
-      component: HomeView,
-      props: route => ({ showSuccess: true })
-    },
-    {
       path: "/questions/:questionType",
       name: "questions",
       component: QuestionsView,
       props: route => ({ questionType: route.params.questionType })
-    }
+    },
+    {
+      path: "/success",
+      name: "success",
+      component: SuccessView,
+    },
   ],
 });
 
