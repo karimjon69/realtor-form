@@ -33,3 +33,5 @@ npm run build
 ```sh
 npm run lint
 ```
+
+CopyRight Feb 12 2023
