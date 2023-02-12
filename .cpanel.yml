@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/realypvo/node_js_app/
+    - export DEPLOYPATH=/home/realypvo/node-js-app/
     - /bin/cp -R * $DEPLOYPATH
