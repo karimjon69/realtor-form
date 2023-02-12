@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node ./server/index.js",
     "dev": "vite",
-    "build": "vite build",
+    "build": "npx vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "build-prod": "npm install && npm run build && copyfiles dist/* server && copyfiles dist/assets/* server && copyfiles -f server/dist/background.jpg server/dist/assets"
