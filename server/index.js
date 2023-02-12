@@ -5,7 +5,7 @@ const app = express();
 var cors = require('cors');
 require('dotenv').config();
 app.use(serveStatic(__dirname + "/dist"));
-var port = process.env.PORT || 8001;
+var port = process.env.PORT === undefined ? 3000 : process.env.PORT;
 app.use(cors());
 app.use(express.json());
 var smsService = require("./sms-service");
