@@ -20,3 +20,5 @@ app.post('/sendSms', function (req, res) {
 });
 
 app.listen(port);
+
+console.log('Server running in Port: ' + port);
