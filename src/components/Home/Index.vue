@@ -31,7 +31,7 @@ export default {
         <font-awesome-icon icon="fa-solid fa-house-flag" />
       </Button> <br/>
       <Button size="large" type="primary" @click="handleClick('buyingAndSelling')" round>
-        I'M BUYING & SELLING
+        I'M BUYING & SELLING!!!!
         <font-awesome-icon icon="fa-solid fa-handshake" />
       </Button> <br/>
     </div>
